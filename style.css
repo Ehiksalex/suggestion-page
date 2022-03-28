@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.grid-item1, .grid-item2, .grid-item3,
+.grid-item4, .grid-item5, .grid-item6, .grid-item7, .grid-item8,
+.grid-item9, .grid-item10{
+    padding: 10px 5px;
+}
+.grid-item1 .box, .grid-item2 .box, .grid-item3 .box,
+.grid-item4 .box, .grid-item5 .box, .grid-item6 .box, .grid-item7 .box, .grid-item8 .box,
+.grid-item9 .box, .grid-item10 .box{
+    width:100%;
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 10px;
+    font-family: poppins, sans-serif;
+}
+.grid-item1 .box{
+    background: url(img/IMG-20220327-WA0041.jpg);
+}
+.grid-item1 .box h1{
+    color:#ffffff;
+    text-align: center;
+}
+.grid-item1 .box p{ 
+    color:#ffffff;
+    text-align:center;
+}
+.grid-container{
+    width: 100%;
+    height:fit-content;
+    background-color:rgb(181, 214, 243); 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "item1 item4"
+    "item1 item5"
+    "item2 item6"
+    "item2 item7"
+    "item3 item7"
+    "item3 item8"
+    "item3 item8"
+    "item3 item9"
+    "item3 item10";
+}
+.grid-item1{
+    /* background-color: red; */
+    grid-area: item1;
+    width: 300px;
+    margin-left: 100px;
+}
+.grid-item2{
+    /* background-color: blue; */
+    grid-area: item2;
+    width: 300px;
+    margin-left: 100px;
+}
+.grid-item3{
+    /* background-color: green; */
+    grid-area: item3;
+    height: 200px;
+    width: 300px;
+    margin-left: 100px;
+}
+.grid-item4{
+    grid-area: item4;
+}
+.grid-item5{
+    /* background-color: pink; */
+    grid-area: item5;
+}
+.grid-item6{
+    /* background-color: black; */
+    grid-area: item6;
+}
+.grid-item7{
+    /* background-color: purple; */
+    grid-area: item7;
+}
+.grid-item8{
+    /* background-color: aqua; */
+    grid-area: item8;
+}
+.grid-item9{
+    /* background-color: rgb(80, 5, 5); */
+    grid-area: item9;
+}
+.grid-item10{
+    /* background-color: olivedrab; */
+    grid-area: item10;
+}
+.grid-item4, .grid-item5, .grid-item6, .grid-item7, .grid-item8,
+.grid-item9, .grid-item10{
+    margin-right: 20px;
+}
+
+/* tablet view */
+@media screen and (max-width:827px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "item1 item2 item3" 
+        "item4 item4 item4"
+        "item5 item5 item5"
+        "item6 item6 item6"
+        "item7 item7 item7"
+        "item8 item8 item8"
+        "item9 item9 item9"
+        "item10 item10 item10"
+    }  
+    .grid-item3, .grid-item1, .grid-item2{
+        width: 200px;
+        margin-left: 0.5px;
+    }
+}
+/* mobile view */
+@media screen and (max-width:414px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8"
+        "item9"
+        "item10";
+    }  
+}
+button{
+    display:flex;
+    width:auto;
+    color: blue;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+}
+button:hover{
+    background: #0508aa;
+    color: #ffffff;
+}
+.grid-item4 .box{
+    background: rgb(9, 9, 43);
+    color: #ffffff;   
+}
+.grid-item8 .box .hero, .grid-item9 .box .hero1, .grid-item10 .box .hero2,
+.grid-item7 .box .hero3, .grid-item6 .box .hero4, .grid-item5 .box .hero5, .grid-item4 .box .hero6 {
+    text-align:justify ;
+    padding: 2rem;
+}
